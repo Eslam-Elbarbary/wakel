@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { img6, img7, img8, img9, img10, img11, img12 } from '../constants/images';
 import Image from './Image';
 
@@ -49,9 +50,12 @@ function FeaturedLawyersSection() {
         {/* Lawyer Card 1 */}
         <div className="bg-white flex flex-col gap-4 sm:gap-5 lg:gap-[20px] h-auto sm:h-[500px] items-center justify-center p-3 sm:p-4 lg:p-[12px] rounded-[10px] shadow-[0px_2px_20px_0px_rgba(0,0,0,0.04)] w-full lg:w-[315px] relative overflow-hidden">
           <div className="flex flex-1 flex-col gap-2 sm:gap-3 lg:gap-[8px] items-center min-h-px min-w-px w-full">
-            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-2 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-48 sm:h-64 lg:h-auto">
+            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-3 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-[200px] sm:h-64 lg:h-auto">
               <Image alt="Lawyer profile" className="absolute inset-0 object-cover pointer-events-none rounded-[10px] w-full h-full z-0" src={img6} />
-              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center w-full relative z-[1]">
+              {/* Overlay gradient for better text visibility on mobile */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20 rounded-[10px] z-[1] sm:hidden"></div>
+              {/* Stars - Top Right */}
+              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center justify-end w-full relative z-[2] mb-auto">
                 <div className="relative w-4 h-4 sm:w-5 sm:h-5 lg:w-[20px] lg:h-[20px]">
                   <Image alt="Star rating" className="block w-full h-full object-contain" src={img7} />
                 </div>
@@ -68,9 +72,10 @@ function FeaturedLawyersSection() {
                   <Image alt="Star rating empty" className="block w-full h-full object-contain" src={img8} />
                 </div>
               </div>
-              <div className="bg-[#e8f4fd] flex items-center justify-center px-2 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[1]">
-                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-sm sm:text-base lg:text-[20px] text-start">
-                  +3 سنوات
+              {/* Experience Badge - Top Left */}
+              <div className="bg-[#e8f4fd] flex items-center justify-center px-2.5 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[2] mt-auto self-start">
+                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-xs sm:text-base lg:text-[20px] text-center whitespace-nowrap">
+                  3+ سنوات
                 </p>
               </div>
             </div>
@@ -97,19 +102,25 @@ function FeaturedLawyersSection() {
               </div>
             </div>
           </div>
-          <div className="bg-[#0a4875] flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full">
+          <Link
+            to="/lawyer-profile"
+            className="bg-[#0a4875] cursor-pointer flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full hover:opacity-90 transition-opacity"
+          >
             <p className="font-cairo font-bold leading-normal text-xs sm:text-sm lg:text-[16px] text-end text-white">
               تحقق من الملف الشخصي
             </p>
-          </div>
+          </Link>
         </div>
 
         {/* Lawyer Card 2 */}
         <div className="bg-white flex flex-col gap-4 sm:gap-5 lg:gap-[20px] h-auto sm:h-[500px] items-center justify-center p-3 sm:p-4 lg:p-[12px] rounded-[10px] shadow-[0px_2px_20px_0px_rgba(0,0,0,0.04)] w-full lg:w-[315px] relative overflow-hidden">
           <div className="flex flex-1 flex-col gap-2 sm:gap-3 lg:gap-[8px] items-center min-h-px min-w-px w-full">
-            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-2 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-48 sm:h-64 lg:h-auto">
+            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-3 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-[200px] sm:h-64 lg:h-auto">
               <Image alt="Lawyer profile" className="absolute inset-0 object-cover pointer-events-none rounded-[10px] w-full h-full z-0" src={img10} />
-              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center w-full relative z-[1]">
+              {/* Overlay gradient for better text visibility on mobile */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20 rounded-[10px] z-[1] sm:hidden"></div>
+              {/* Stars - Top Right */}
+              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center justify-end w-full relative z-[2] mb-auto">
                 <div className="relative w-4 h-4 sm:w-5 sm:h-5 lg:w-[20px] lg:h-[20px]">
                   <Image alt="Star rating" className="block w-full h-full object-contain" src={img7} />
                 </div>
@@ -126,9 +137,10 @@ function FeaturedLawyersSection() {
                   <Image alt="Star rating empty" className="block w-full h-full object-contain" src={img8} />
                 </div>
               </div>
-              <div className="bg-[#e8f4fd] flex items-center justify-center px-2 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[1]">
-                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-sm sm:text-base lg:text-[20px] text-end">
-                  +3 سنوات
+              {/* Experience Badge - Top Left */}
+              <div className="bg-[#e8f4fd] flex items-center justify-center px-2.5 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[2] mt-auto self-start">
+                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-xs sm:text-base lg:text-[20px] text-center whitespace-nowrap">
+                  3+ سنوات
                 </p>
               </div>
             </div>
@@ -155,19 +167,25 @@ function FeaturedLawyersSection() {
               </div>
             </div>
           </div>
-          <div className="bg-[#0a4875] flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full">
+          <Link
+            to="/lawyer-profile"
+            className="bg-[#0a4875] cursor-pointer flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full hover:opacity-90 transition-opacity"
+          >
             <p className="font-cairo font-bold leading-normal text-xs sm:text-sm lg:text-[16px] text-end text-white">
               تحقق من الملف الشخصي
             </p>
-          </div>
+          </Link>
         </div>
 
         {/* Lawyer Card 3 */}
         <div className="bg-white flex flex-col gap-4 sm:gap-5 lg:gap-[20px] h-auto sm:h-[500px] items-center justify-center p-3 sm:p-4 lg:p-[12px] rounded-[10px] shadow-[0px_2px_20px_0px_rgba(0,0,0,0.04)] w-full lg:w-[315px] relative overflow-hidden">
           <div className="flex flex-1 flex-col gap-2 sm:gap-3 lg:gap-[8px] items-center min-h-px min-w-px w-full">
-            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-2 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-48 sm:h-64 lg:h-auto">
+            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-3 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-[200px] sm:h-64 lg:h-auto">
               <Image alt="Lawyer profile" className="absolute inset-0 object-cover pointer-events-none rounded-[10px] w-full h-full z-0" src={img11} />
-              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center w-full relative z-[1]">
+              {/* Overlay gradient for better text visibility on mobile */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20 rounded-[10px] z-[1] sm:hidden"></div>
+              {/* Stars - Top Right */}
+              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center justify-end w-full relative z-[2] mb-auto">
                 <div className="relative w-4 h-4 sm:w-5 sm:h-5 lg:w-[20px] lg:h-[20px]">
                   <Image alt="Star rating" className="block w-full h-full object-contain" src={img7} />
                 </div>
@@ -184,9 +202,10 @@ function FeaturedLawyersSection() {
                   <Image alt="Star rating empty" className="block w-full h-full object-contain" src={img8} />
                 </div>
               </div>
-              <div className="bg-[#e8f4fd] flex items-center justify-center px-2 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[1]">
-                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-sm sm:text-base lg:text-[20px] text-end">
-                  +3 سنوات
+              {/* Experience Badge - Top Left */}
+              <div className="bg-[#e8f4fd] flex items-center justify-center px-2.5 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[2] mt-auto self-start">
+                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-xs sm:text-base lg:text-[20px] text-center whitespace-nowrap">
+                  3+ سنوات
                 </p>
               </div>
             </div>
@@ -213,19 +232,25 @@ function FeaturedLawyersSection() {
               </div>
             </div>
           </div>
-          <a className="bg-[#0a4875] cursor-pointer flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full">
+          <Link
+            to="/lawyer-profile"
+            className="bg-[#0a4875] cursor-pointer flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full hover:opacity-90 transition-opacity"
+          >
             <p className="font-cairo font-bold leading-normal text-xs sm:text-sm lg:text-[16px] text-end text-white">
               تحقق من الملف الشخصي
             </p>
-          </a>
+          </Link>
         </div>
 
         {/* Lawyer Card 4 */}
         <div className="bg-white flex flex-col gap-4 sm:gap-5 lg:gap-[20px] h-auto sm:h-[500px] items-center justify-center p-3 sm:p-4 lg:p-[12px] rounded-[10px] shadow-[0px_2px_20px_0px_rgba(0,0,0,0.04)] w-full lg:w-[315px] relative overflow-hidden">
           <div className="flex flex-1 flex-col gap-2 sm:gap-3 lg:gap-[8px] items-center min-h-px min-w-px w-full">
-            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-2 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-48 sm:h-64 lg:h-auto">
+            <div className="flex flex-1 flex-col items-end justify-between min-h-px min-w-px p-3 sm:p-3 lg:p-[8px] rounded-[10px] w-full relative overflow-hidden h-[200px] sm:h-64 lg:h-auto">
               <Image alt="Lawyer profile" className="absolute inset-0 object-cover pointer-events-none rounded-[10px] w-full h-full z-0" src={img12} />
-              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center w-full relative z-[1]">
+              {/* Overlay gradient for better text visibility on mobile */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20 rounded-[10px] z-[1] sm:hidden"></div>
+              {/* Stars - Top Right */}
+              <div className="flex gap-1 sm:gap-2 lg:gap-[4px] h-4 sm:h-5 lg:h-[20px] items-center justify-end w-full relative z-[2] mb-auto">
                 <div className="relative w-4 h-4 sm:w-5 sm:h-5 lg:w-[20px] lg:h-[20px]">
                   <Image alt="Star rating" className="block w-full h-full object-contain" src={img7} />
                 </div>
@@ -242,9 +267,10 @@ function FeaturedLawyersSection() {
                   <Image alt="Star rating empty" className="block w-full h-full object-contain" src={img8} />
                 </div>
               </div>
-              <div className="bg-[#e8f4fd] flex items-center justify-center px-2 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[1]">
-                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-sm sm:text-base lg:text-[20px] text-end">
-                  +3 سنوات
+              {/* Experience Badge - Top Left */}
+              <div className="bg-[#e8f4fd] flex items-center justify-center px-2.5 sm:px-3 lg:px-[12px] py-1.5 sm:py-2 lg:py-[8px] rounded-[8px] relative z-[2] mt-auto self-start">
+                <p className="font-cairo font-bold leading-[28px] text-[#0a4875] text-xs sm:text-base lg:text-[20px] text-center whitespace-nowrap">
+                  3+ سنوات
                 </p>
               </div>
             </div>
@@ -271,11 +297,14 @@ function FeaturedLawyersSection() {
               </div>
             </div>
           </div>
-          <a className="bg-[#0a4875] cursor-pointer flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full">
+          <Link
+            to="/lawyer-profile"
+            className="bg-[#0a4875] cursor-pointer flex gap-2 sm:gap-3 lg:gap-[10px] h-10 sm:h-12 lg:h-[52px] items-center justify-center p-2 sm:p-3 lg:p-[10px] rounded-[8px] w-full hover:opacity-90 transition-opacity"
+          >
             <p className="font-cairo font-bold leading-normal text-xs sm:text-sm lg:text-[16px] text-end text-white">
               تحقق من الملف الشخصي
             </p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
